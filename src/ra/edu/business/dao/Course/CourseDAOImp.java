@@ -1,4 +1,4 @@
-package ra.edu.business.dao.Course;
+package ra.edu.business.dao.course;
 
 import ra.edu.business.config.ConnectionDB;
 import ra.edu.business.model.Course;

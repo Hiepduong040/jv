@@ -12,7 +12,7 @@
 //    List<Statistic> listAllCoursesWithStudentCount();
 //}
 
-package ra.edu.business.dao.Statistic;
+package ra.edu.business.dao.statistic;
 
 import ra.edu.business.model.Statistic;
 

@@ -188,7 +188,7 @@
 package ra.edu.presentation;
 
 import ra.edu.business.model.Student;
-import ra.edu.business.service.Student.StudentServiceImp;
+import ra.edu.business.service.student.StudentServiceImp;
 import ra.edu.validate.StudentValidator;
 import ra.edu.validate.Validator;
 import ra.edu.validate.ValidatorChoice;
@@ -211,14 +211,20 @@ public class ManagerStudentUI {
         Scanner scanner = new Scanner(System.in);
         boolean Exit = false;
         do {
-            System.out.println(CYAN + "================== Quản lý học viên ==================" + RESET);
-            System.out.println(GREEN + "1. Hiển thị danh sách học viên" + RESET);
-            System.out.println(GREEN + "2. Thêm mới học viên" + RESET);
-            System.out.println(GREEN + "3. Chỉnh sửa thông tin học viên" + RESET);
-            System.out.println(GREEN + "4. Xóa học viên" + RESET);
-            System.out.println(GREEN + "5. Tìm kiếm học viên" + RESET);
-            System.out.println(GREEN + "6. Sắp xếp học viên" + RESET);
-            System.out.println(GREEN + "7. Quay về menu chính" + RESET);
+            System.out.println(CYAN + "========================= QUẢN LÝ HỌC VIÊN ==========================" + RESET);
+            System.out.println(CYAN + "╔════════════╦══════════════════════════════════════════════════════╗");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "Lựa chọn", "Mô tả");
+            System.out.println("╠════════════╬══════════════════════════════════════════════════════╣");
+
+            System.out.printf("║ %-10s ║ %-52s ║\n", "1", "Hiển thị danh sách học viên");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "2", "Thêm mới học viên");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "3", "Chỉnh sửa thông tin học viên");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "4", "Xóa học viên");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "5", "Tìm kiếm học viên");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "6", "Sắp xếp học viên");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "7", "Quay về menu chính");
+            System.out.println("╚════════════╩══════════════════════════════════════════════════════╝" + RESET);
+
             int choice = ValidatorChoice.validater(scanner);
             switch (choice) {
                 case 1:
@@ -247,6 +253,9 @@ public class ManagerStudentUI {
             }
         } while (!Exit);
     }
+
+    // Remaining methods omitted for brevity...
+
 
     public static void displayListStudentPagination(Scanner scanner) {
         studentServiceImp.listStudentsPagination(scanner);

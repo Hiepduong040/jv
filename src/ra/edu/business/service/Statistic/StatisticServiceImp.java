@@ -81,14 +81,13 @@
 //        }
 //    }
 //}
-package ra.edu.business.service.Statistic;
+package ra.edu.business.service.statistic;
 
-import ra.edu.business.dao.Statistic.StatisticDAO;
-import ra.edu.business.dao.Statistic.StatisticDAOImp;
+import ra.edu.business.dao.statistic.StatisticDAO;
+import ra.edu.business.dao.statistic.StatisticDAOImp;
 import ra.edu.business.model.Pagination;
 import ra.edu.business.model.Statistic;
 import ra.edu.validate.Validator;
-import ra.edu.validate.ValidatorChoice;
 
 import java.util.List;
 import java.util.Scanner;

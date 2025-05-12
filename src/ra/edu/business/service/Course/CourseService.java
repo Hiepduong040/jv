@@ -1,4 +1,4 @@
-package ra.edu.business.service.Course;
+package ra.edu.business.service.course;
 
 import ra.edu.business.dao.AppDAO;
 import ra.edu.business.model.Course;

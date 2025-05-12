@@ -1,4 +1,4 @@
-package ra.edu.business.dao.Auth;
+package ra.edu.business.dao.auth;
 
 import ra.edu.business.config.ConnectionDB;
 import ra.edu.business.model.Admin;
@@ -8,7 +8,6 @@ import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
 
 public class AuthDAOImp implements AuthDAO {
     @Override

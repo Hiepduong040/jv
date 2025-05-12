@@ -48,11 +48,10 @@
 //    }
 //}
 
-
 package ra.edu.presentation;
 
-import ra.edu.business.service.Statistic.StatisticService;
-import ra.edu.business.service.Statistic.StatisticServiceImp;
+import ra.edu.business.service.statistic.StatisticService;
+import ra.edu.business.service.statistic.StatisticServiceImp;
 import ra.edu.validate.ValidatorChoice;
 
 import java.util.Scanner;
@@ -71,12 +70,18 @@ public class Dashboard {
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
         do {
-            System.out.println(CYAN + "===================== Thống kê ======================" + RESET);
-            System.out.println(GREEN + "1. Thống kê tổng số lượng khóa học và học viên" + RESET);
-            System.out.println(GREEN + "2. Thống kê học viên theo từng khóa học" + RESET);
-            System.out.println(GREEN + "3. Top 5 khóa học đông học viên nhất" + RESET);
-            System.out.println(GREEN + "4. Liệt kê khóa học có trên 10 học viên" + RESET);
-            System.out.println(GREEN + "5. Quay về menu chính" + RESET);
+            System.out.println(CYAN + "============================= THỐNG KÊ ==============================" + RESET);
+            System.out.println(CYAN + "╔════════════╦══════════════════════════════════════════════════════╗");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "Lựa chọn", "Mô tả");
+            System.out.println("╠════════════╬══════════════════════════════════════════════════════╣");
+
+            System.out.printf("║ %-10s ║ %-52s ║\n", "1", "Thống kê tổng số khóa học và học viên");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "2", "Thống kê học viên theo từng khóa học");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "3", "Top 5 khóa học đông học viên nhất");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "4", "Liệt kê khóa học có trên 10 học viên");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "5", "Quay về menu chính");
+            System.out.println("╚════════════╩══════════════════════════════════════════════════════╝" + RESET);
+
             int choice = ValidatorChoice.validater(scanner);
             switch (choice) {
                 case 1:

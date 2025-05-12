@@ -43,7 +43,6 @@
 //}
 
 
-
 package ra.edu.presentation;
 
 import ra.edu.ManiApplication;
@@ -58,17 +57,25 @@ public class AdminUI {
     public static final String GREEN = "\u001B[32m";
     public static final String YELLOW = "\u001B[33m";
     public static final String CYAN = "\u001B[36m";
+    public static final String PURPLE = "\u001B[35m";
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
         do {
-            System.out.println(CYAN + "================== Menu Quản trị viên ==================" + RESET);
-            System.out.println(GREEN + "1. Quản lý khóa học" + RESET);
-            System.out.println(GREEN + "2. Quản lý học viên" + RESET);
-            System.out.println(GREEN + "3. Quản lý đăng ký học" + RESET);
-            System.out.println(GREEN + "4. Thống kê học viên theo khóa học" + RESET);
-            System.out.println(GREEN + "5. Đăng xuất" + RESET);
+            System.out.println(CYAN + "============================= ADMIN UI ==============================" + RESET);
+            System.out.println(CYAN + "╔════════════╦══════════════════════════════════════════════════════╗");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "Lựa chọn", "Mô tả");
+            System.out.println("╠════════════╬══════════════════════════════════════════════════════╣");
+
+            System.out.printf("║ %-10s ║ %-52s ║\n", "1", "Quản lý khóa học");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "2", "Quản lý học viên");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "3", "Quản lý đăng ký học");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "4", "Thống kê học viên theo khóa học");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "5", "Đăng xuất");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "6", "Thoát chương trình.");
+            System.out.println("╚════════════╩══════════════════════════════════════════════════════╝" + RESET);
+
             int choice = ValidatorChoice.validater(scanner);
             switch (choice) {
                 case 1:
@@ -89,7 +96,7 @@ public class AdminUI {
                     System.out.println(YELLOW + "Đã đăng xuất!" + RESET);
                     break;
                 default:
-                    System.out.println(RED + "Lựa chọn không hợp lệ, vui lòng chọn từ 1 - 5!" + RESET);
+                    System.out.println(RED + "Lựa chọn không hợp lệ, vui lòng chọn từ 1 - 6!" + RESET);
             }
         } while (!exit);
     }

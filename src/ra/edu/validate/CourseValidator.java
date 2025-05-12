@@ -1,7 +1,7 @@
 package ra.edu.validate;
 
 import ra.edu.business.model.Course;
-import ra.edu.business.service.Course.CourseServiceImp;
+import ra.edu.business.service.course.CourseServiceImp;
 
 import java.util.Scanner;
 

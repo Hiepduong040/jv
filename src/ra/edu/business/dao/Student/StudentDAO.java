@@ -1,4 +1,4 @@
-package ra.edu.business.dao.Student;
+package ra.edu.business.dao.student;
 
 import ra.edu.business.model.Student;
 

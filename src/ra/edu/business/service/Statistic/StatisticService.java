@@ -9,7 +9,7 @@
 //    void listCoursesWithMoreThanTenStudents();
 //}
 
-package ra.edu.business.service.Statistic;
+package ra.edu.business.service.statistic;
 
 import java.util.Scanner;
 

@@ -1,7 +1,7 @@
 package ra.edu.validate;
 
 import ra.edu.business.model.Student;
-import ra.edu.business.service.Student.StudentServiceImp;
+import ra.edu.business.service.student.StudentServiceImp;
 
 import java.time.LocalDate;
 import java.util.Scanner;

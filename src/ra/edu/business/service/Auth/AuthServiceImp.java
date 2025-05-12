@@ -1,6 +1,6 @@
-package ra.edu.business.service.Auth;
+package ra.edu.business.service.auth;
 
-import ra.edu.business.dao.Auth.AuthDAOImp;
+import ra.edu.business.dao.auth.AuthDAOImp;
 
 public class AuthServiceImp implements AuthService {
     private AuthDAOImp authDAOImp;

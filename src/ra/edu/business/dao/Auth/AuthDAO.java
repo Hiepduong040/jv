@@ -1,7 +1,4 @@
-package ra.edu.business.dao.Auth;
-
-import ra.edu.business.model.Admin;
-import ra.edu.business.model.Student;
+package ra.edu.business.dao.auth;
 
 public interface AuthDAO {
     Object login(String username, String password);

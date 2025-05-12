@@ -1,6 +1,6 @@
-package ra.edu.business.service.Student;
+package ra.edu.business.service.student;
 
-import ra.edu.business.dao.Student.StudentDAOImp;
+import ra.edu.business.dao.student.StudentDAOImp;
 import ra.edu.business.model.Pagination;
 import ra.edu.business.model.Student;
 import ra.edu.validate.Validator;

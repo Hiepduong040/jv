@@ -353,7 +353,7 @@
 package ra.edu.presentation;
 
 import ra.edu.business.model.Course;
-import ra.edu.business.service.Course.CourseServiceImp;
+import ra.edu.business.service.course.CourseServiceImp;
 import ra.edu.validate.CourseValidator;
 import ra.edu.validate.Validator;
 import ra.edu.validate.ValidatorChoice;
@@ -374,14 +374,20 @@ public class CourseUI {
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
         do {
-            System.out.println(CYAN + "================== Quản lý khóa học ==================" + RESET);
-            System.out.println(GREEN + "1. Hiển thị danh sách khóa học" + RESET);
-            System.out.println(GREEN + "2. Thêm mới khóa học" + RESET);
-            System.out.println(GREEN + "3. Chỉnh sửa thông tin khóa học" + RESET);
-            System.out.println(GREEN + "4. Xóa khóa học" + RESET);
-            System.out.println(GREEN + "5. Tìm kiếm khóa học" + RESET);
-            System.out.println(GREEN + "6. Sắp xếp khóa học" + RESET);
-            System.out.println(GREEN + "7. Quay về menu chính" + RESET);
+            System.out.println(CYAN + "========================= QUẢN LÝ KHÓA HỌC ==========================" + RESET);
+            System.out.println(CYAN + "╔════════════╦══════════════════════════════════════════════════════╗");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "Lựa chọn", "Mô tả");
+            System.out.println("╠════════════╬══════════════════════════════════════════════════════╣");
+
+            System.out.printf("║ %-10s ║ %-52s ║\n", "1", "Hiển thị danh sách khóa học");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "2", "Thêm mới khóa học");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "3", "Chỉnh sửa thông tin khóa học");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "4", "Xóa khóa học");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "5", "Tìm kiếm khóa học");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "6", "Sắp xếp khóa học");
+            System.out.printf("║ %-10s ║ %-52s ║\n", "7", "Quay về menu chính");
+            System.out.println("╚════════════╩══════════════════════════════════════════════════════╝" + RESET);
+
             int choice = ValidatorChoice.validater(scanner);
             switch (choice) {
                 case 1:
@@ -410,6 +416,9 @@ public class CourseUI {
             }
         } while (!exit);
     }
+
+    // Remaining methods omitted for brevity...
+
 
     public static void displayListCoursePagination(Scanner scanner) {
         courseServiceImp.listCoursesPagination(scanner);
